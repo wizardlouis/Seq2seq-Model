@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db235afb-70cc-49a8-a534-a2339dbf03d7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Jupyter Notebook" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="0d5d6b01-b651-4a94-91d2-0b555291310a" />
+  <component name="ProjectId" id="1eby1FoumMwhyZU1D9yQf4GRuae" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.LowrankTest">
+    <configuration name="LowrankTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LowrankTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gene_seq" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gene_seq.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="seq_train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seq_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.LowrankTest" />
+        <item itemvalue="Python.seq_train" />
+        <item itemvalue="Python.gene_seq" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db235afb-70cc-49a8-a534-a2339dbf03d7" name="Default Changelist" comment="" />
+      <created>1594604369737</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594604369737</updated>
+      <workItem from="1594604374093" duration="3018000" />
+      <workItem from="1594608006742" duration="699000" />
+      <workItem from="1594609004252" duration="8392000" />
+      <workItem from="1594711611785" duration="6361000" />
+      <workItem from="1594904334335" duration="600000" />
+      <workItem from="1594905230861" duration="3801000" />
+      <workItem from="1594963400324" duration="1672000" />
+      <workItem from="1594969349618" duration="102000" />
+      <workItem from="1594969464513" duration="120000" />
+      <workItem from="1594969616432" duration="110000" />
+      <workItem from="1594969748422" duration="3976000" />
+      <workItem from="1595128307160" duration="299000" />
+      <workItem from="1595175846729" duration="169000" />
+      <workItem from="1595208317065" duration="2794000" />
+      <workItem from="1595212078605" duration="6000" />
+      <workItem from="1595212221803" duration="6420000" />
+      <workItem from="1595225426668" duration="829000" />
+      <workItem from="1595331886397" duration="4835000" />
+      <workItem from="1595337721755" duration="133000" />
+      <workItem from="1595418907784" duration="9544000" />
+      <workItem from="1595475442050" duration="1971000" />
+      <workItem from="1595478141998" duration="8536000" />
+      <workItem from="1595490850335" duration="2544000" />
+      <workItem from="1595495062637" duration="2806000" />
+      <workItem from="1596029309025" duration="3509000" />
+      <workItem from="1596034888125" duration="184000" />
+      <workItem from="1596035192189" duration="1018000" />
+      <workItem from="1596036215716" duration="1757000" />
+      <workItem from="1596038462886" duration="7000" />
+      <workItem from="1596038490285" duration="60000" />
+      <workItem from="1596038569740" duration="37000" />
+      <workItem from="1596038631873" duration="300000" />
+      <workItem from="1596039034373" duration="1049000" />
+      <workItem from="1596040452815" duration="22000" />
+      <workItem from="1596040478706" duration="527000" />
+      <workItem from="1596070958322" duration="4198000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="627" y="308" key="FileChooserDialogImpl" timestamp="1596035216321">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="627" y="308" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1596035216321" />
+    <state width="1638" height="292" key="GridCell.Tab.0.bottom" timestamp="1595483689336">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1600" height="280" key="GridCell.Tab.0.bottom/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707366" />
+    <state width="1638" height="292" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689336" />
+    <state width="1600" height="278" key="GridCell.Tab.0.bottom/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456455" />
+    <state width="1638" height="292" key="GridCell.Tab.0.center" timestamp="1595483689335">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1600" height="280" key="GridCell.Tab.0.center/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707365" />
+    <state width="1638" height="292" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689335" />
+    <state width="1600" height="278" key="GridCell.Tab.0.center/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456454" />
+    <state width="1638" height="292" key="GridCell.Tab.0.left" timestamp="1595483689334">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1600" height="280" key="GridCell.Tab.0.left/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707364" />
+    <state width="1638" height="292" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689334" />
+    <state width="1600" height="278" key="GridCell.Tab.0.left/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456453" />
+    <state width="1638" height="292" key="GridCell.Tab.0.right" timestamp="1595483689335">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1600" height="280" key="GridCell.Tab.0.right/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707366" />
+    <state width="1638" height="292" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689335" />
+    <state width="1600" height="278" key="GridCell.Tab.0.right/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456454" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1594721857090">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857090" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1594721857090">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857090" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1594721857089">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857089" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1594721857090">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857090" />
+    <state x="633" y="87" key="SettingsEditor" timestamp="1596035969050">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="633" y="87" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1596035969050" />
+    <state x="71" y="75" width="1515" height="870" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1595432208333">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="71" y="75" width="1515" height="870" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595432208333" />
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/38.23.1642.1027@38.23.1642.1027" timestamp="1594908695487" />
+    <state x="488" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1596070959460">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="515" y="371" key="com.intellij.ide.util.TipDialog/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594604374750" />
+    <state x="488" y="356" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596070959460" />
+    <state x="515" y="371" key="com.intellij.ide.util.TipDialog/38.23.1642.1027@38.23.1642.1027" timestamp="1595490852679" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1596039734503">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596039734503" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Seq$gene_seq.coverage" NAME="gene_seq Coverage Results" MODIFIED="1595426260049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seq$Low_rank_Test.coverage" NAME="LowrankTest Coverage Results" MODIFIED="1595434494205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seq$seq_train.coverage" NAME="seq_train Coverage Results" MODIFIED="1595434487904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seq$LowrankTest.coverage" NAME="LowrankTest Coverage Results" MODIFIED="1595483682380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
