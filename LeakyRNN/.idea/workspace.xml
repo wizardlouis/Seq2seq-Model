@@ -1,22 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db235afb-70cc-49a8-a534-a2339dbf03d7" name="Default Changelist" comment="" />
+    <list default="true" id="db235afb-70cc-49a8-a534-a2339dbf03d7" name="Default Changelist" comment="add fixed points finder and a function to get one step update of network">
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/20200819.pptx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/args.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/delay_pca_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/delay_pca_3d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_delay_pca(1e-5)_3d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_fps_pca(1e-5)_2d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_fps_pca(1e-5)_2d_rank1=1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_fps_pca(1e-5)_2d_rank2=1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_fps_pca(1e-5)_3d.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_fps_pca(1e-5)_3d_rank1=1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/fps_and_delay_in_fps_pca(1e-5)_3d_rank2=1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/geo_trajectory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/geo_trajectory_all.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/loss.npz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/model.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/ppt638C.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/8.17/len2-1/seq.npz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Seq.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Seq.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RNNTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/RNNTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reproduct.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gene_seq.py" beforeDir="false" afterPath="$PROJECT_DIR$/gene_seq.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/network.py" beforeDir="false" afterPath="$PROJECT_DIR$/network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rw.py" beforeDir="false" afterPath="$PROJECT_DIR$/rw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seq_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/seq_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/Seq.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/7.30-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/8.12-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/8.12-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/8.6-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/8.6-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/RNNTest-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/RNNTest-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/data-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/network-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/network-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/.ipynb_checkpoints/seq_train-checkpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/seq_train-checkpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/LowrankTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/RNNTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/fixed_points_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixed_points_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/gene_seq.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/network.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/rw.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../LeakyRNN_8.15/seq_train.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LeakyRNN_8_15$testfile.coverage" NAME="testfile Coverage Results" MODIFIED="1597651290755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LeakyRNN_8_15$network.coverage" NAME="network Coverage Results" MODIFIED="1597636325526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LeakyRNN_8_15$rw.coverage" NAME="rw Coverage Results" MODIFIED="1597635907660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/LeakyRNN_8_15$RNNTest.coverage" NAME="RNNTest Coverage Results" MODIFIED="1597648330170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gene_seq.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LowrankTest.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/network.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1782">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="24" />
+              <folding>
+                <element signature="e#4882#11955#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rw.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fixed_points_finder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4374">
+              <caret line="246" column="20" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#22#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="630">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RNNTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2142">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/seq_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1710">
+              <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>selected trainset satisfy condition!!!</find>
+      <find>hp</find>
+      <find>hps</find>
+      <find>Adam`</find>
+      <find>Adam</find>
+      <find>stopping</find>
+      <find>ad_min</find>
+      <find>step</find>
+      <find>6f</find>
+      <find>adam</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/seq_train.py" />
+        <option value="$PROJECT_DIR$/network.py" />
+        <option value="$PROJECT_DIR$/RNNTest.py" />
+        <option value="$PROJECT_DIR$/testfile.py" />
+        <option value="$PROJECT_DIR$/gene_seq.py" />
+        <option value="$PROJECT_DIR$/rw.py" />
+        <option value="$PROJECT_DIR$/fixed_points_finder.py" />
       </list>
     </option>
   </component>
   <component name="JupyterTrust" id="0d5d6b01-b651-4a94-91d2-0b555291310a" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="495" />
+    <option name="y" value="69" />
+    <option name="width" value="954" />
+    <option name="height" value="960" />
+  </component>
   <component name="ProjectId" id="1eby1FoumMwhyZU1D9yQf4GRuae" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -35,8 +225,28 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.LowrankTest">
-    <configuration name="LowrankTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\m1334\Documents\MEGA\PKU\0\Neuron\sequence\LeakyRNN\LeakyRNN_8.15" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.testfile">
+    <configuration name="RNNTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Seq" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -49,7 +259,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LowrankTest.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RNNTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -58,7 +268,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gene_seq" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="multi" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Seq" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,7 +281,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gene_seq.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -80,7 +290,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="seq_train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="network" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Seq" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,7 +303,51 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/seq_train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/network.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rw" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rw.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testfile" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Seq" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testfile.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -104,9 +358,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.LowrankTest" />
-        <item itemvalue="Python.seq_train" />
-        <item itemvalue="Python.gene_seq" />
+        <item itemvalue="Python.testfile" />
+        <item itemvalue="Python.RNNTest" />
+        <item itemvalue="Python.network" />
+        <item itemvalue="Python.rw" />
+        <item itemvalue="Python.multi" />
       </list>
     </recent_temporary>
   </component>
@@ -168,81 +424,308 @@
       <workItem from="1596040452815" duration="22000" />
       <workItem from="1596040478706" duration="527000" />
       <workItem from="1596070958322" duration="4198000" />
+      <workItem from="1596435581916" duration="467000" />
+      <workItem from="1596596379348" duration="43000" />
+      <workItem from="1596596670094" duration="809000" />
+      <workItem from="1596597484590" duration="2674000" />
+      <workItem from="1596618881865" duration="1013000" />
+      <workItem from="1596709364197" duration="5965000" />
+      <workItem from="1596959816775" duration="6807000" />
+      <workItem from="1596978740932" duration="5177000" />
+      <workItem from="1597026238917" duration="1487000" />
+      <workItem from="1597031811357" duration="827000" />
+      <workItem from="1597158776119" duration="4641000" />
+      <workItem from="1597222781440" duration="26354000" />
+      <workItem from="1597398509169" duration="2995000" />
+      <workItem from="1597623179636" duration="20007000" />
+      <workItem from="1597647993336" duration="23681000" />
+      <workItem from="1597887740267" duration="4365000" />
+      <workItem from="1597988258356" duration="158000" />
+      <workItem from="1597988626090" duration="572000" />
     </task>
+    <task id="LOCAL-00001" summary="add fixed points finder and a function to get one step update of network">
+      <created>1597987998098</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597987998098</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="48783000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16734034" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4995958" weight="0.35655057" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39966834" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32669982" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004042" side_tool="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32669982" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add fixed points finder and a function to get one step update of network" />
+    <option name="LAST_COMMIT_MESSAGE" value="add fixed points finder and a function to get one step update of network" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="627" y="308" key="FileChooserDialogImpl" timestamp="1596035216321">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="627" y="308" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" timestamp="1596035216321" />
-    <state width="1638" height="292" key="GridCell.Tab.0.bottom" timestamp="1595483689336">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1600" height="280" key="GridCell.Tab.0.bottom/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707366" />
-    <state width="1638" height="292" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689336" />
-    <state width="1600" height="278" key="GridCell.Tab.0.bottom/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456455" />
-    <state width="1638" height="292" key="GridCell.Tab.0.center" timestamp="1595483689335">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1600" height="280" key="GridCell.Tab.0.center/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707365" />
-    <state width="1638" height="292" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689335" />
-    <state width="1600" height="278" key="GridCell.Tab.0.center/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456454" />
-    <state width="1638" height="292" key="GridCell.Tab.0.left" timestamp="1595483689334">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1600" height="280" key="GridCell.Tab.0.left/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707364" />
-    <state width="1638" height="292" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689334" />
-    <state width="1600" height="278" key="GridCell.Tab.0.left/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456453" />
-    <state width="1638" height="292" key="GridCell.Tab.0.right" timestamp="1595483689335">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1600" height="280" key="GridCell.Tab.0.right/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594608707366" />
-    <state width="1638" height="292" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1595483689335" />
-    <state width="1600" height="278" key="GridCell.Tab.0.right/38.23.1642.1027@38.23.1642.1027" timestamp="1595477456454" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1594721857090">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857090" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1594721857090">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857090" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1594721857089">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857089" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1594721857090">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1594721857090" />
-    <state x="633" y="87" key="SettingsEditor" timestamp="1596035969050">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="633" y="87" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1596035969050" />
-    <state x="71" y="75" width="1515" height="870" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1595432208333">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="71" y="75" width="1515" height="870" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595432208333" />
-    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/38.23.1642.1027@38.23.1642.1027" timestamp="1594908695487" />
-    <state x="488" y="356" key="com.intellij.ide.util.TipDialog" timestamp="1596070959460">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="515" y="371" key="com.intellij.ide.util.TipDialog/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" timestamp="1594604374750" />
-    <state x="488" y="356" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596070959460" />
-    <state x="515" y="371" key="com.intellij.ide.util.TipDialog/38.23.1642.1027@38.23.1642.1027" timestamp="1595490852679" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1596039734503">
-      <screen x="0" y="0" width="1680" height="1050" />
-    </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1596039734503" />
+    <state x="-1680" y="198" key="#Deployment" />
+    <state x="-1680" y="198" key="#Deployment/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="-1680" y="198" key="#Python" />
+    <state x="-1680" y="198" key="#Python/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="-1605" y="233" key="FileChooserDialogImpl" />
+    <state x="-1605" y="233" key="FileChooserDialogImpl/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="627" y="308" key="FileChooserDialogImpl/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1259" height="419" key="GridCell.Tab.0.bottom" />
+    <state width="1259" height="419" key="GridCell.Tab.0.bottom/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state width="1600" height="280" key="GridCell.Tab.0.bottom/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1638" height="292" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1600" height="278" key="GridCell.Tab.0.bottom/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1259" height="419" key="GridCell.Tab.0.center" />
+    <state width="1259" height="419" key="GridCell.Tab.0.center/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state width="1600" height="280" key="GridCell.Tab.0.center/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1638" height="292" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1600" height="278" key="GridCell.Tab.0.center/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1259" height="419" key="GridCell.Tab.0.left" />
+    <state width="1259" height="419" key="GridCell.Tab.0.left/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state width="1600" height="280" key="GridCell.Tab.0.left/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1638" height="292" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1600" height="278" key="GridCell.Tab.0.left/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1259" height="419" key="GridCell.Tab.0.right" />
+    <state width="1259" height="419" key="GridCell.Tab.0.right/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state width="1600" height="280" key="GridCell.Tab.0.right/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1638" height="292" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1600" height="278" key="GridCell.Tab.0.right/38.23.1642.1027@38.23.1642.1027" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" />
+    <state x="-1544" y="62" key="SettingsEditor" />
+    <state x="-1852" y="256" key="SettingsEditor/-2521.-166.2521.1417/0.23.1680.1027@-2521.-166.2521.1417" />
+    <state x="-1544" y="62" key="SettingsEditor/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="-1881" y="240" key="SettingsEditor/-2560.-189.2560.1440/0.23.1680.1027@-2560.-189.2560.1440" />
+    <state x="633" y="87" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" />
+    <state x="679" y="429" key="SettingsEditor/0.0.2560.1440@0.0.2560.1440" />
+    <state x="-2498" y="559" width="2309" height="1194" key="com.intellij.history.integration.ui.views.FileHistoryDialog" />
+    <state x="-2498" y="559" width="2309" height="1194" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-2521.-166.2521.1417/0.23.1680.1027@-2521.-166.2521.1417" />
+    <state x="-2452" y="-86" width="2309" height="1194" key="com.intellij.history.integration.ui.views.FileHistoryDialog/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="71" y="75" width="1515" height="870" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1680.1050@0.0.1680.1050" />
+    <state x="100" y="100" width="1480" height="850" key="com.intellij.history.integration.ui.views.FileHistoryDialog/38.23.1642.1027@38.23.1642.1027" />
+    <state x="-1816" y="299" key="com.intellij.ide.util.TipDialog" />
+    <state x="-1788" y="314" key="com.intellij.ide.util.TipDialog/-2521.-166.2521.1417/0.23.1680.1027@-2521.-166.2521.1417" />
+    <state x="488" y="371" key="com.intellij.ide.util.TipDialog/-2521.-166.2521.1417/0.23.1680.1027@0.23.1680.1027" />
+    <state x="-1816" y="299" key="com.intellij.ide.util.TipDialog/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="488" y="356" key="com.intellij.ide.util.TipDialog/-2560.-189.2560.1440/0.0.1680.1050@0.0.1680.1050" />
+    <state x="515" y="371" key="com.intellij.ide.util.TipDialog/-690.-1669.3008.1669/38.23.1642.1027@38.23.1642.1027" />
+    <state x="488" y="356" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" />
+    <state x="744" y="488" key="com.intellij.ide.util.TipDialog/0.0.2560.1440@0.0.2560.1440" />
+    <state x="515" y="371" key="com.intellij.ide.util.TipDialog/38.23.1642.1027@38.23.1642.1027" />
+    <state x="772" y="503" key="com.intellij.ide.util.TipDialog/39.23.2521.1417@39.23.2521.1417" />
+    <state x="-1614" y="377" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" />
+    <state x="-1614" y="377" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="-1724" y="407" width="355" height="519" key="ftp.server.browser" />
+    <state x="-1796" y="364" key="ftp.server.browser/-2521.-166.2521.1417/0.23.1680.1027@-2521.-166.2521.1417" />
+    <state x="-1724" y="407" width="355" height="519" key="ftp.server.browser/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="-1384" y="448" key="publish.login" />
+    <state x="-1384" y="448" key="publish.login/-2521.-166.2521.1417/0.23.1680.1027@-2521.-166.2521.1417" />
+    <state x="-1384" y="448" key="publish.login/-2560.-189.2560.1440/0.0.1680.1050@-2560.-189.2560.1440" />
+    <state x="1155" y="624" key="publish.login/0.0.2560.1440@0.0.2560.1440" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Seq$gene_seq.coverage" NAME="gene_seq Coverage Results" MODIFIED="1595426260049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seq$Low_rank_Test.coverage" NAME="LowrankTest Coverage Results" MODIFIED="1595434494205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seq$multi.coverage" NAME="multi Coverage Results" MODIFIED="1596980998687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seq$seq_train.coverage" NAME="seq_train Coverage Results" MODIFIED="1595434487904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seq$LowrankTest.coverage" NAME="LowrankTest Coverage Results" MODIFIED="1595483682380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.ipynb_checkpoints/RNNTest-checkpoint.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ipynb_checkpoints/8.6-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.ipynb_checkpoints/8.12-checkpoint.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/loss.npz" />
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="549" selection-start-line="549" selection-end-line="549" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.12/len2-1/args.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.12/len2-2/args.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="234" selection-start-column="234" selection-end-column="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.12/len2-3(1act)/args.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Program Files (x86)/python/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="311" selection-start-line="311" selection-end-line="311" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/torch/tensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="511" selection-start-line="511" selection-end-line="511" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.19/len2-1/loss.npz">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.12.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gene_seq.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="91" column="43" selection-start-line="91" selection-start-column="43" selection-end-line="91" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="8" selection-end-line="103" selection-end-column="24" />
+          <folding>
+            <element signature="e#4882#11955#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fixed_points_finder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4374">
+          <caret line="246" column="20" selection-start-line="246" selection-start-column="20" selection-end-line="246" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RNNTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seq_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="103" column="20" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LowrankTest.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>
