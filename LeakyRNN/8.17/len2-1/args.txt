@@ -1,0 +1,1 @@
+{"out_dir": "8.17//len2-1", "n_epochs": 1500, "burn_in": 750, "n_item": 6, "seq_length": 2, "N_Neuron": 128, "batch_size": 6, "t_rest": 30, "t_on": 15, "t_off": 5, "t_ron": 10, "t_roff": 5, "t_delay": 30, "t_retrieve": 150, "t_cue": 5, "t_ad_min": 20, "t_ad_max": 20, "g_D": 0.0, "decay": 0.1, "learning_rate": 0.01, "trainset_ratio": 1.0}
