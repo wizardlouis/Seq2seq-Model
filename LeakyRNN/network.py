@@ -23,19 +23,19 @@ class myRNN(nn.Module):
         self.W = W
         self.d = decay
         self.act_func = act_func
-        self.Vec_embedding = Vec_embedding;
-        self.Vectorrep = Vectorrep;
+        self.Vec_embedding = Vec_embedding
+        self.Vectorrep = Vectorrep
         self.g_D = g_D
-        self.t_rest = t_rest;
-        self.t_on = t_on;
-        self.t_off = t_off;
-        self.t_ron = t_ron;
+        self.t_rest = t_rest
+        self.t_on = t_on
+        self.t_off = t_off
+        self.t_ron = t_ron
         self.t_roff = t_roff
-        self.t_delay = t_delay;
-        self.t_retrieve = t_retrieve;
+        self.t_delay = t_delay
+        self.t_retrieve = t_retrieve
         self.t_cue = t_cue
         self.training = training
-        self.use_scale_loss = False;
+        self.use_scale_loss = False
         self.train_geometry = train_geometry
 
         self.Geometry = nn.Linear(in_features=self.N, out_features=2, bias=True)

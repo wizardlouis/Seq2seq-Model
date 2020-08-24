@@ -116,8 +116,8 @@ Loss, reLoss, delayLoss = Iter_train_burn_pos(l_RNN, optimizer, None, trainset, 
 #     UnseenLoss,_,_=Batch_testNet_Loss(l_RNN,testset)
 #     Loss_t.append([TrainLoss/n_train,SeenLoss/n_train,UnseenLoss/n_test])
 
-Loss = np.array(Loss);
-reLoss = np.array(reLoss);
+Loss = np.array(Loss)
+reLoss = np.array(reLoss)
 delayLoss = np.array(delayLoss)
 
 score_train = testNet_distance(l_RNN, trainset, Direction, 1)
