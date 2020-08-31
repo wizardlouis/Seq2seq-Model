@@ -4,7 +4,7 @@ from torch.autograd import Variable
 import time
 
 
-def find_fixed_points(rnn_fun, candidates, hps, unique=True ,do_print=True):
+def find_fixed_points(rnn_fun, candidates, hps, unique=True, do_print=True):
     """Top-level routine to find fixed points, keeping only valid fixed points.
     This function will:
       Add noise to the fixed point candidates ('noise_var')
@@ -39,7 +39,6 @@ def find_fixed_points(rnn_fun, candidates, hps, unique=True ,do_print=True):
 
     if do_print and hps['fp_tol'] < np.inf:
         print("Excluding fixed points with squared speed above tolerance {:0.7f}.".format(hps['fp_tol']))
-
     fps = fixed_points_with_tolerance(rnn_fun, fps, hps['fp_tol'], do_print)
     # if len(fps) == 0:
     #     return torch.zeros([0, dim]), torch.tensor([0]), [], opt_details
@@ -85,7 +84,7 @@ def get_fp_loss_fun(rnn):
 
     loss_fun = nn.MSELoss()
     update_fun = rnn.get_one_step_fun()
-    return lambda h: loss_fun(h, update_fun(h, input=torch.zeros(rnn.N))[0])
+    return lambda h: loss_fun(h, update_fun(h, input=torch.zeros(rnn.hidden_size))[0])
 
 
 def get_total_fp_loss_fun(rnn_fun):
@@ -114,7 +113,7 @@ def adjust_learning_rate(optimizer, epoch, hps):
     return lr
 
 
-def timeSince(since):
+def time_since(since):
     now = time.time()
     s = now - since
     # m = math.floor(s / 60)
@@ -122,7 +121,7 @@ def timeSince(since):
     return s
 
 
-def  optimize_fps(rnn_fun, fp_candidates, hps, do_print=True):
+def optimize_fps(rnn_fun, fp_candidates, hps, do_print=True):
     """Find fixed points of the rnn via optimization.
     This loop is at the cpu non-JAX level.
     Arguments:
@@ -160,14 +159,14 @@ def  optimize_fps(rnn_fun, fp_candidates, hps, do_print=True):
         if epoch == 0:
             start = time.time()
         if do_print and epoch % print_every == 0 and epoch != 0:
-            s = "Batches %s - %s in %.2f sec, Step size: %.5f, Training loss %.7f" % (
-                epoch - print_every, epoch, timeSince(start), adjust_learning_rate(optimizer, epoch, hps), loss)
+            s = "Batches %s - %s in %.2f sec, Step size: %.5f, Training loss %.9f" % (
+                epoch - print_every, epoch, time_since(start), adjust_learning_rate(optimizer, epoch, hps), loss)
             start = time.time()
             print(s)
         if loss < hps['fp_opt_stop_tol']:
             do_stop = True
             if do_print:
-                print('Stopping as mean training loss %.7f is below tolerance %.7f.' % (loss, hps[
+                print('Stopping as mean training loss %.9f is below tolerance %.9f.' % (loss, hps[
                     'fp_opt_stop_tol']))
     optimizer_details = {"fp_losses": fp_losses}
     return fp_candidates, optimizer_details
@@ -259,6 +258,7 @@ def compute_jacobians(rnn, points):
     #     jacob = fp.grad.reshape(dim, *dim)
     #     jacobians = torch.cat((jacobians, jacob.unsqueeze(0)), dim=0)
     # return jacobians
+
 
 def compute_eigenvalue_decomposition(Ms, sort_by='magnitude', do_compute_lefts=True):
     """Compute the eigenvalues of the matrix M. No assumptions are made on M.

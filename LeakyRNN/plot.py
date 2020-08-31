@@ -3,65 +3,83 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 from mpl_toolkits.mplot3d import Axes3D
 
-from network import Direction
-from rw import *
+from utils import *
+from configs import *
+from gene_seq import rank_batch2input_batch
 
 
-# Batch_Seq(Batch_Size,seq_length)
-def plot_trajectory(Net, Batch_Seq, row, column=5):
-    Direct = np.array(Direction)
-    h_0 = Net.reset_hidden()
+def plot_trajectory(model, rank_batch, hps, row, column=5):
+    direct = np.array(DIRECTION)
+    t_rest = hps['t_rest']
+    t_on = hps['t_on']
+    t_off = hps['t_off']
+    t_ron = hps['t_ron']
+    t_roff = hps['t_roff']
+    t_retrieve = hps['t_retrieve']
+    t_cue = hps['t_cue']
+    rank_size = hps['rank_size']
+
+    input_batch, _, t_delay = rank_batch2input_batch(rank_batch, hps)
+    h_0 = model.reset_hidden()
     # geometry (T,Batch_Size,2)
-    _, geometry, _ = Net(h_0, Batch_Seq)
+    _, geometry, _, _ = model(h_0, input_batch)
     geometry = geometry.detach().numpy()
     c = np.zeros(len(geometry))
     for i in range(len(c)):
         c[i] = i / len(c)
-    for i in range(len(Batch_Seq[0])):
-        c[-Net.t_retrieve + Net.t_cue + i * (Net.t_ron + Net.t_roff):-Net.t_retrieve + Net.t_cue + i * (
-                Net.t_ron + Net.t_roff) + Net.t_ron] = 0
+    for i in range(rank_size):
+        c[t_delay + t_cue + i * (t_ron + t_roff):t_delay + t_cue + i * (t_ron + t_roff) + t_ron] = 0
     cm = plt.cm.get_cmap('autumn')
-    for k in range(len(Batch_Seq)):
+    for k in range(len(rank_batch)):
         plt.subplot(row, column, k + 1)
         plt.xlim(-2, 2)
         plt.ylim(-2, 2)
-        plt.scatter(Direct[:, 0], Direct[:, 1], color='', edgecolor='g', s=200, marker='o')
+        plt.scatter(direct[:, 0], direct[:, 1], color='', edgecolor='g', s=200, marker='o')
         plt.scatter(geometry[:, k, 0], geometry[:, k, 1], vmin=0, vmax=1, c=c, cmap=cm)
-        plt.text(-2, -2, str(Batch_Seq[k]))
+        plt.text(-2, -2, str(rank_batch[k]))
 
 
-def plot_trajectory2(Net, Batch_Seq, row, column=5):
-    Direct = np.array(Direction)
-    h_0 = Net.reset_hidden()
+def plot_trajectory2(model, rank_batch, hps, row, column=5):
+    direct = np.array(DIRECTION)
+    t_rest = hps['t_rest']
+    t_on = hps['t_on']
+    t_off = hps['t_off']
+    t_ron = hps['t_ron']
+    t_roff = hps['t_roff']
+    t_retrieve = hps['t_retrieve']
+    t_cue = hps['t_cue']
+    rank_size = hps['rank_size']
+
+    input_batch, _, t_delay = rank_batch2input_batch(rank_batch, hps)
+    h_0 = model.reset_hidden()
     # geometry (T,Batch_Size,2)
-    _, geometry, _ = Net(h_0, Batch_Seq)
-    seq_length = len(Batch_Seq[0])
+    _, geometry, _, _ = model(h_0, input_batch)
     geometry = geometry.detach().numpy()
-    geometry = geometry[-Net.t_retrieve - Net.t_delay: -Net.t_retrieve + Net.t_cue + seq_length * Net.t_ron + (
-            seq_length - 1) * Net.t_roff]
+    geometry = geometry[-t_delay - t_retrieve: -t_retrieve + t_cue + rank_size * t_ron + (rank_size - 1) * t_roff]
     c = np.zeros(len(geometry))
     for i in range(len(c)):
         c[i] = i / len(c)
-    for i in range(seq_length):
-        c[Net.t_delay + Net.t_cue + i * (Net.t_ron + Net.t_roff):Net.t_delay + Net.t_cue + i * (
-                Net.t_ron + Net.t_roff) + Net.t_ron] = 0
+    for i in range(rank_size):
+        c[t_delay + t_cue + i * (t_ron + t_roff):t_delay + t_cue + i * (
+                t_ron + t_roff) + t_ron] = 0
     cm = plt.cm.get_cmap('autumn')
-    for k in range(len(Batch_Seq)):
+    for k in range(len(rank_batch)):
         plt.subplot(row, column, k + 1)
         plt.xlim(-2, 2)
         plt.ylim(-2, 2)
-        plt.scatter(Direct[:, 0], Direct[:, 1], color='', edgecolor='g', s=200, marker='o')
+        plt.scatter(direct[:, 0], direct[:, 1], color='', edgecolor='g', s=200, marker='o')
         plt.scatter(geometry[:, k, 0], geometry[:, k, 1], vmin=0, vmax=1, c=c, cmap=cm)
-        plt.text(-2, -2, str(Batch_Seq[k]), fontsize=20)
+        plt.text(-2, -2, str(rank_batch[k]), fontsize=20)
 
 
-def plot_fps(all_fps, tol, components, model, batch_seq, pcaset='fps', is_3d=False):
-    delay_points = get_delay_points(model, batch_seq, 30, 15, 5, 10, 5, 50, 150,
-                                    5, 1)
+# TODO need to rewrite delay part
+def plot_fps(all_fps, tol, components, net, rank_batch, hps, pcaset='fps', is_3d=False):
+    delay_points = get_hidden_delay(net, rank_batch, 1, hps)
     if pcaset == 'fps':
         pca = PCA(n_components=3).fit(all_fps[tol]['fps'])
     if pcaset == 'delay':
         pca = PCA(n_components=3).fit(delay_points.detach().numpy())
+    print(pca.explained_variance_ratio_)
     # get all fixed/slow points
     hstars = np.reshape(all_fps[tol]['fps'], (-1, 128))
     # get all delay stage points
@@ -113,8 +131,8 @@ def plot_fps(all_fps, tol, components, model, batch_seq, pcaset='fps', is_3d=Fal
 
 
 def plot_pca_trajectory(all_fps, tol, n_neuro, components, model, batch_seq, row, column=2, pcaset='fps', is_3d=False):
-    hidden, c = get_trajectories(model, batch_seq)
-    delay_points = get_delay_points(model, batch_seq, 30, 15, 5, 10, 5, 50, 150,
+    hidden, c = get_hidden(model, batch_seq)
+    delay_points = get_hidden_delay(model, batch_seq, 30, 15, 5, 10, 5, 50, 150,
                                     5, 1)
     if pcaset == 'fps':
         pca = PCA(n_components=3).fit(all_fps[tol]['fps'])
@@ -178,3 +196,29 @@ def plot_pca_trajectory(all_fps, tol, n_neuro, components, model, batch_seq, row
             ax.set_xlim(-a, a)
             ax.set_ylim(-a, a)
             ax.set_title(str(batch_seq[k]))
+
+
+if __name__ == '__main__':
+    path = 'test//1'
+    seq, loss, model, data_hps = load_path(path)
+    trainset = seq['train']
+    testset = seq['test']
+
+    data_hps = {
+        't_rest': 30,
+        't_on': 15,
+        't_off': 5,
+        't_ron': 10,
+        't_roff': 5,
+        't_cue': 5,
+        't_delay': 50,
+        't_add_delay_max': 50,
+        't_retrieve': 150,
+        'rank_size': 2,
+        'delay_fixed': False,
+        'add_noise': False,
+        'g': 0.1
+    }
+    plt.figure(figsize=(50, 60))
+    plot_trajectory(model, testset, data_hps, 6, 5)
+    plt.show()
