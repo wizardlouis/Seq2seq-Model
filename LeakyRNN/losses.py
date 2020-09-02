@@ -7,19 +7,18 @@ import time
 
 
 class Trainer(object):
-    def __init__(self, model, burn_in, batch_size, hps, criterion=None, optimizer=None, train_set=None):
+    def __init__(self, model, burn_in, batch_size, hps, optimizer=None, lr_scheduler=None, train_set=None):
         """
-
+        initialize a network trainer
         :param model:
         :param burn_in:
         :param hps:
-        :param criterion:
         :param optimizer:
-        :param train_set: rank seq train set
+        :param train_set: rank seq train set, list object!
         """
         self.model = model
-        self.criterion = criterion
         self.optimizer = optimizer
+        self.scheduler = lr_scheduler
         self.train_set = train_set
         self.batch_size = batch_size
         self.iterations = 0
@@ -31,10 +30,7 @@ class Trainer(object):
         for i in range(epochs):
             print("epoch: %i" % (i + 1))
             start = time.time()
-            if i > self.burn_in:
-                total_loss, retrieve_loss, delay_loss = self.train_step(self.hps, burn_in=True)
-            else:
-                total_loss, retrieve_loss, delay_loss = self.train_step(self.hps)
+            total_loss, retrieve_loss, delay_loss = self.train_step(self.hps, i, epochs)
             total_losses.append(total_loss)
             retrieve_losses.append(retrieve_loss)
             delay_losses.append(delay_loss)
@@ -43,14 +39,15 @@ class Trainer(object):
             print("using time: %f5 s \n" % cost)
         return total_losses, retrieve_losses, delay_losses
 
-    def train_step(self, hps, burn_in=False):
+    def train_step(self, hps, epoch, total_epochs):
         input_batch, rank_batch, target_batch, t_delay = gene_input_batch_seq(self.train_set, self.batch_size, hps)
         self.optimizer.zero_grad()
-
         hidden_0 = self.model.reset_hidden()
         hidden_t, geometry_t, _, _ = self.model(hidden_0, input_batch)
         total_loss, retrieve_loss, delay_loss = get_pos_loss(geometry_t, target_batch, t_delay, hps)
-        if burn_in:
+        if epoch > self.burn_in:
+            delay_ratio = (epoch - self.burn_in) / (total_epochs - self.burn_in) + 0.5
+            total_loss = retrieve_loss + delay_ratio * delay_loss
             total_loss.backward()
             total_loss, retrieve_loss, delay_loss = total_loss.data.item(), retrieve_loss.data.item(), delay_loss.data.item()
             print('total Loss = {}\nretrieve Loss = {}\ndelay Loss = {}'
@@ -60,6 +57,8 @@ class Trainer(object):
             total_loss, retrieve_loss, delay_loss = total_loss.data.item(), retrieve_loss.data.item(), delay_loss.data.item()
             print('retrieve Loss = {}'.format(str(retrieve_loss)))
         self.optimizer.step()
+        if self.scheduler is not None:
+            self.scheduler.step(total_loss)
         return total_loss, retrieve_loss, delay_loss
 
 

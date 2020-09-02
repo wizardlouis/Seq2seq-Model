@@ -62,10 +62,12 @@ def gene_input_batch_seq(rank_seq_set, batch_size, hps):
     :param hps:
     :return:
     """
+    # print(rank_seq_set)
+    x = rank_seq_set.copy()
     random.shuffle(rank_seq_set)
-    rank_batch = rank_seq_set[:batch_size]
-    input_batch, target_batch, t_delay = rank_batch2input_batch(rank_batch, hps)
+    rank_batch = x[:batch_size]
 
+    input_batch, target_batch, t_delay = rank_batch2input_batch(rank_batch, hps)
     return input_batch, rank_batch, target_batch, t_delay
 
 

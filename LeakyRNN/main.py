@@ -40,6 +40,9 @@ parser.add_argument("--g_d", help="scaling of noise in seq2Input signal", type=f
 parser.add_argument("--decay", help="decay parameter of leaky neuron", type=float, default=DECAY)
 parser.add_argument("--train_ratio", help="ratio of training sequence number compared to total sequences number",
                     type=float, default=TRAIN_RATIO)
+parser.add_argument("--resume", help="resume training the model from a checkpoint", type=str, default="False")
+parser.add_argument("--checkpoint_index", help="choose a checkpoint for resuming", type=int, default=0)
+parser.add_argument("--save_checkpoint", help="save as a checkpoint after training", type=str, default="False")
 
 args = parser.parse_args()
 
@@ -48,11 +51,13 @@ n_epochs = args.n_epochs
 burn_in = args.burn_in
 learning_rate = args.learning_rate
 
-# make and shuffle sequence datasets
 n_item = args.n_item
 rank_size = args.rank_size
 batch_size = args.batch_size
 train_ratio = args.train_ratio
+resume = args.resume
+checkpoint_index = args.checkpoint_index
+save_checkpoint = args.save_checkpoint
 
 t_rest = args.t_rest
 t_on = args.t_on
@@ -69,11 +74,11 @@ g_d = args.g_d
 # -------------------preparing for training-----------------------------
 activation = nn.Tanh()
 model = MyRNN(n_neuron, activation)
-
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
-scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', factor=0.5, patience=10)
+scheduler = None
+# scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', factor=0.5, patience=10)
 print(model.parameters())
-# divide sequence into train and test set, train set is not typical train set due to noise added to seq2Input
+
 data_hps = {
     't_rest': t_rest,
     't_on': t_ron,
@@ -90,14 +95,22 @@ data_hps = {
     'g': g_d
 }
 
-train_set, test_set = gene_rank_sequence_set(ITEM_LIST, rank_size, train_ratio)
+if resume == 'True':
+    checkpoint = torch.load(out_dir + '/checkpoint/' + str(checkpoint_index) + '/model.pth')
+    model.load_state_dict(checkpoint['model_state_dict'])
+    optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+    seq = np.load(out_dir + '/checkpoint/' + str(checkpoint_index) + '/seq.npz')
+    train_set = seq['train'].tolist()
+    test_set = seq['test'].tolist()
+else:
+    train_set, test_set = gene_rank_sequence_set(ITEM_LIST, rank_size, train_ratio)
 print("train set:", train_set, '\n')
 print("test set:", test_set, '\n')
 
 # ---------------------training------------------------------
 
-
-trainer = Trainer(model, burn_in, batch_size, data_hps, optimizer=optimizer, train_set=train_set)
+trainer = Trainer(model, burn_in, batch_size, data_hps, optimizer=optimizer, lr_scheduler=scheduler,
+                  train_set=train_set)
 total_losses, retrieve_losses, delay_losses = trainer.run(n_epochs)
 
 total_losses = np.array(total_losses)
@@ -110,9 +123,20 @@ delay_losses = np.array(delay_losses)
 
 # saving result and models
 print(vars(args))
-save(vars(args), out_dir, 'args.txt', 'dictxt')
-np.savez(out_dir + '//loss.npz', total_losses=total_losses, retrieve_losses=retrieve_losses, delay_losses=delay_losses)
-np.savez(out_dir + '//seq.npz', train=train_set, test=test_set)
-np.save(out_dir + '//data_hps.npy', data_hps)
-torch.save(model, out_dir + '//model.pth')
 
+if save_checkpoint == 'True':
+    if not os.path.exists(out_dir + '/checkpoint/' + str(checkpoint_index + 1)):
+        os.makedirs(out_dir + '/checkpoint/' + str(checkpoint_index + 1))
+    torch.save({'model_state_dict': model.state_dict(),
+                'optimizer_state_dict': optimizer.state_dict()},
+               out_dir + '/checkpoint/' + str(checkpoint_index + 1) + '/model.pth')
+    save(vars(args), out_dir + '/checkpoint/' + str(checkpoint_index + 1), 'args.txt', 'dictxt')
+    np.save(out_dir + '/checkpoint/' + str(checkpoint_index + 1) + '/data_hps.npy', data_hps)
+    np.savez(out_dir + '/checkpoint/' + str(checkpoint_index + 1) + '/seq.npz', train=train_set, test=test_set)
+else:
+    save(vars(args), out_dir, 'args.txt', 'dictxt')
+    np.savez(out_dir + '//loss.npz', total_losses=total_losses, retrieve_losses=retrieve_losses,
+             delay_losses=delay_losses)
+    np.savez(out_dir + '//seq.npz', train=train_set, test=test_set)
+    np.save(out_dir + '//data_hps.npy', data_hps)
+    torch.save({'model': model, 'optimizer_state_dict': optimizer.state_dict()}, out_dir + '//model.pth')

@@ -40,12 +40,11 @@ def save(object, filepath, filename, type, *args, **kwargs):
 def load_path(filepath, seq='seq.npz', loss='loss.npz', model='model.pth', data_hps='data_hps.npy'):
     seq = np.load(filepath + '//' + seq)
     loss = np.load(filepath + '//' + loss)
-    model = torch.load(filepath + '//' + model)
+    model = torch.load(filepath + '//' + model)['model']
     data_hps = np.load(filepath + '//' + data_hps).item()
     return seq, loss, model, data_hps
 
 
-# return
 def get_hidden(model, rank_batch, hps):
     """
 
