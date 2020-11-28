@@ -1,0 +1,13 @@
+import os
+
+command=['python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1128//ta_2_10_128_d10_r7 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:1',
+         'python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1128//ta_2_10_128_d10_r11 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:1',
+         'python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1128//ta_2_10_64_d10_r7 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 64 --w_reg 10 --ad_max 10 --device cuda:1',
+         'python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1128//ta_2_10_64_d10_r11 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 64 --w_reg 10 --ad_max 10 --device cuda:1']
+
+command1=['python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1128//ta_2_10_128_d10_r7_1 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:1',
+          'python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1128//ta_2_10_128_d10_r11_1 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:1',
+          'python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1128//ta_2_10_64_d10_r7_1 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 64 --w_reg 10 --ad_max 10 --device cuda:1',
+          'python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1128//ta_2_10_64_d10_r11_1 --act_func Tanh --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 64 --w_reg 10 --ad_max 10 --device cuda:1']
+
+os.system('{} & {} & {} & {} &'.format(command1[0],command1[1],command1[2],command1[3]))
