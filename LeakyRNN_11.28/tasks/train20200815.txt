@@ -1,0 +1,74 @@
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 400 --burn_in 150 --g_D 0.
+
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 150 --burn_in 150 --g_D 0. --learning_rate 0.1
+
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 150 --burn_in 150 --g_D 0. --learning_rate 0.1 --seq_length 3
+
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 150 --burn_in 0 --g_D 0. --learning_rate 0.1
+
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 400 --burn_in 150 --N_Neuron 50 --g_D 0. --learning_rate 0.1
+
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 100 --burn_in 0 --N_Neuron 50 --g_D 0. --learning_rate 0.1
+
+python RNNTest.py --out_dir 7.30//RNN//test --n_epoch 100 --burn_in 10 --N_Neuron 50 --g_D 0. --learning_rate 0.1
+
+python RNNTest.py --out_dir 7.30//RNN//test2 --n_epoch 300 --burn_in 300 --N_Neuron 100 --g_D 0. --learning_rate 0.005
+
+python RNNTest.py --out_dir 7.30//RNN//test3 --n_epoch 450 --burn_in 300 --N_Neuron 100 --g_D 0. --learning_rate 0.005 --seq_length 3
+
+python RNNTest.py --out_dir 7.30//RNN//test6 --n_epoch 450 --burn_in 300 --N_Neuron 64 --g_D 0. --learning_rate 0.005
+
+python RNNTest.py --out_dir 7.30//RNN//test7 --n_epoch 450 --burn_in 300 --N_Neuron 32 --g_D 0. --learning_rate 0.005
+
+python RNNTest.py --out_dir 7.30//RNN//test8 --n_epoch 450 --burn_in 300 --N_Neuron 32 --g_D 0. --learning_rate 0.005
+
+python RNNTest.py --out_dir 7.30//fixed//test1 --n_epoch 450 --burn_in 300 --N_Neuron 100 --g_D 0. --learning_rate 0.005
+
+python RNNTest.py --out_dir 7.30//fixed//test2 --n_epoch 450 --burn_in 300 --N_Neuron 100 --g_D 0. --learning_rate 0.005 --seq_length 3
+
+python RNNTest.py --out_dir 7.30//fixed//test3 --n_epoch 450 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3
+
+python RNNTest.py --out_dir 7.30//fixed//test4 --n_epoch 250 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 5 --t_off 15
+
+python RNNTest.py --out_dir 7.30//fixed//test5 --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 5 --t_off 15
+
+python RNNTest.py --out_dir 7.30//fixed//test6 --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 5 --t_off 15 --batch_size 16
+
+
+python RNNTest.py --out_dir 8.9//distance --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 2 --t_on 5 --t_off 15 --batch_size 4
+
+python RNNTest.py --out_dir 7.30//fixed//test6 --n_epoch 1000 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 5 --t_off 15 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 5 --t_off 15 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance2 --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 5 --t_off 15 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance3 --n_epoch 200 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 10 --t_off 10 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance4 --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 15 --t_off 10 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance5 --n_epoch 200 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 15 --t_off 5 --t_ron 5 --t_roff 15 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance6 --n_epoch 400 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_on 15 --t_off 10 --t_ron 3 --t_roff 15 --batch_size 16
+
+python RNNTest.py --out_dir 8.12//distance7 --n_epoch 1200 --burn_in 0 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 5 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 20 --t_delay 30 --t_ad_min 10 --t_ad_max 20 不稳定
+
+python RNNTest.py --out_dir 8.12//distance8 --n_epoch 400 --burn_in 400 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20
+
+python RNNTest.py --out_dir 8.12//distance9 --n_epoch 400 --burn_in 400 --N_Neuron 128 --g_D 0. --learning_rate 0.005 --seq_length 3 --t_cue 15 --t_on 15 --t_off 5 --t_ron 5 --t_roff 10 --batch_size 16 --t_delay 60 --t_ad_min 20 --t_ad_max 20
+
+python RNNTest.py --out_dir 8.12//distance10 --n_epoch 800 --burn_in 300 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20
+
+python RNNTest.py --out_dir 8.12//distance11 --n_epoch 800 --burn_in 300 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20 这个全对
+
+python RNNTest.py --out_dir 8.12//distance12 --n_epoch 1000 --burn_in 300 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20 全对
+
+python RNNTest.py --out_dir 8.12//distance13 --n_epoch 1600 --burn_in 300 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 40 训练全对，测试95%
+
+python RNNTest.py --out_dir 8.12//distance14 --n_epoch 2000 --burn_in 400 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 60 几乎全对
+
+python RNNTest.py --out_dir 8.12//distance15 --n_epoch 1000 --burn_in 300 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20 训练集改了1/3 训练集比较好，测试集比较差
+
+python RNNTest.py --out_dir 8.12//distance16 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20 训练0.85 测试0.4375
+
+python RNNTest.py --out_dir 8.12//distance17 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0. --learning_rate 0.01 --seq_length 3 --t_cue 10 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 16 --t_delay 30 --t_ad_min 20 --t_ad_max 20 --trainset_ratio 0.5 训练测试1：1，1/0.98

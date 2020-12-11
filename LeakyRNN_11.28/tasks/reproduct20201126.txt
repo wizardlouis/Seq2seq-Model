@@ -1,0 +1,27 @@
+将W的问题解决以后：
+python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1126//2_10_128_d3 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 12000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 3 --device cuda:0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1126//2_10_128_d5_r11 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 5 --device cuda:1
+
+python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1126//2_10_128_d10 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 -t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:0
+
+python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1126//2_10_128_nd --batch_size 6 18 --repeat_size 1 1 --loss_weight_dir loss_weight//right_p=12_n=12000.npy --n_epochs 1200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 0 --device cuda:1
+
+python FixedRNN.py  --load_set SD2//Seq_set.npz --out_dir 1126//fixed_2_10_128_nd --batch_size 6 18 --repeat_size 1 1 --loss_weight_dir loss_weight//right_p=12_n=12000.npy --n_epochs 12000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --ad_max 0 --device cuda:1 --s_emb 1 --s_k 1
+
+python RNNTest.py  --load_set SD//Seq_set.npz --out_dir 1126//3_10_128_d10_r7 --batch_size 6 18 72 --repeat_size 1 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:1
+
+python RNNTest.py  --load_set SD//1_0.6_0.6//Seq_set.npz --out_dir 1126//3_10_128_d10_r11 --batch_size 6 18 72 --repeat_size 1 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:0
+
+python RNNTest.py  --load_set SD//1_0.6_0.6//Seq_set.npz --out_dir 1126//3_10_128_d10_r5 --batch_size 6 18 72 --repeat_size 1 1 1 --loss_weight 5e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 3 --learning_rate 0.005 --g 0.01 --t_rinterval 5 --N_Neuron 128 --w_reg 10 --ad_max 10 --device cuda:0
+
+python RNNTest.py  --load_set SD//1_0.6_0.6//Seq_set.npz --out_dir 1126//3_10_128_d10_r11_nw6 --batch_size 6 18 72 --repeat_size 1 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 256 --w_reg 10 --ad_max 10 --device cuda:1
+
+1127.将embedding变成线性层(最终改动)：
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1127//2_10_128_d5_r7 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 5 --device cuda:0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1127//2_10_128_d5_r11 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 5 --device cuda:1
+
+python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1127//2_10_128_d5_r7_0 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 5 --device cuda:0
+
+python RNNTest.py  --load_set SD2//Seq_set.npz --out_dir 1127//2_10_128_d5_r11_0 --batch_size 6 18 --repeat_size 1 1 --loss_weight 1e-4 1e-2 1. --n_epochs 100 --n_loop 200 --t_ron 3 --n_windows 6 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 5 --device cuda:1

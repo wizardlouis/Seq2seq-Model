@@ -1,0 +1,18 @@
+Make data:
+python mixed_seq.py --out_dir SD2 --n_item 6 --mixed_length 2 --trainset_ratio 1 0.6
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result3//origin --batch_size 6 6 --repeat_size 1 1 --loss_weight 0 1 1 --n_epochs 4000 --n_windows 5 --ad_min 7 --ad_max 14 --learning_rate 0.01 --g 0. --t_on 3 --t_off 6 --t_delay 30 --t_ron 3 --t_rinterval 3 --t_cue 3
+
+python RNNTest.py --load_set SD2//Seq_set.npz --load_net result3//origin//model.pth --out_dir result3//origin_0 --batch_size 6 6 --repeat_size 1 1 --loss_weight 0 1 1 --n_epochs 4000 --n_windows 5 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 3 --t_off 6 --t_delay 30 --t_ron 3 --t_rinterval 3 --t_cue 3
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result53//origin --batch_size 6 6 --repeat_size 1 1 --loss_weight 0 1 1 --n_epochs 4000 --n_windows 5 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 5 --t_off 10 --t_delay 30 --t_ron 3 --t_rinterval 3 --t_cue 5
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result53_1//origin --batch_size 6 18 --repeat_size 1 1 --loss_weight 0 1 1 --n_epochs 4000 --n_windows 5 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 5 --t_off 10 --t_delay 30 --t_ron 3 --t_rinterval 3 --t_cue 5
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result53_1//origin_0 --load_net result53_1//origin//model.pth --batch_size 6 18 --repeat_size 1 1 --loss_weight 0 1 1 --n_epochs 4000 --n_windows 5 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 5 --t_off 10 --t_delay 30 --t_ron 3 --t_rinterval 3 --t_cue 5
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result53_13//origin --batch_size 6 18 --repeat_size 1 1 --loss_weight 0 1 1 --n_epochs 4000 --n_windows 4 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 5 --t_off 10 --t_delay 30 --t_ron 3 --t_rinterval 5 --t_cue 3 --t_retrieve 30
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result53_13//origin_test --batch_size 6 18 --repeat_size 1 1 --loss_weight 0 0.1 1 --n_epochs 4000 --n_windows 4 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 5 --t_off 10 --t_delay 30 --t_ron 3 --t_rinterval 5 --t_cue 3 --t_retrieve 30
+
+python RNNTest.py --load_set SD2//Seq_set.npz --out_dir result53_13//origin_test2 --load_net result53_13//origin_test//model.pth --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.0001 0.05 1 --n_epochs 4000 --n_windows 2 --ad_min 7 --ad_max 14 --learning_rate 0.005 --g 0. --t_on 5 --t_off 10 --t_delay 30 --t_ron 3 --t_rinterval 6 --t_cue 3 --t_retrieve 30 --rewrite_param True

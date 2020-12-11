@@ -1,0 +1,51 @@
+Make data:
+python mixed_seq.py --out_dir SD2//1_0.6 --n_item 6 --mixed_length 2 --trainset_ratio 1 0.6
+
+1110:
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0_nd_0 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0. 0. 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.0001_nd_1 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0. 0.0001 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 0 --load_net 1110//2_10_128_0_nd_0//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.0002_nd_2 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0. 0.0002 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 2 --load_net 1110//2_10_128_0.0001_nd_1//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.0005_nd_3 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0. 0.0005 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 4 --load_net 1110//2_10_128_0.0002_nd_2//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.001_nd_4 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0. 0.001 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 7 --load_net 1110//2_10_128_0.0005_nd_3//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.002_nd_5 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0. 0.002 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.001_nd_4//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.003_nd_6 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.00001 0.003 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.002_nd_5//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.005_nd_7 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.00005 0.005 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.003_nd_6//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.01_nd_8 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.0001 0.01 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.005_nd_7//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.01_nd_9 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.0002 0.01 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.01_nd_8//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.02_nd_10 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.0005 0.02 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.01_nd_9//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.02_nd_11 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.001 0.02 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.02_nd_10//model.pth --rewrite_param True
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110//2_10_128_0.02_nd_12 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.001 0.02 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 10 --load_net 1110//2_10_128_0.02_nd_11//model.pth --rewrite_param True
+
+
+1110_2:将embedding改成方差为1/sqrt(N)的正态分布
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110_2//2_10_128_0.01_nd_0 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.0001 0.01 1 --n_epochs 8000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1110_2//2_10_128_0.01_nd_1 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.001 0.01 1 --n_epochs 80000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 10 --ad_max 0 --load_net 1110_2//2_10_128_0.01_nd_0//model.pth --rewrite_param True
+
+1111:w_reg：100
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1111//2_100_128_0.01_nd_0 --batch_size 6 18 --repeat_size 1 1 --loss_weight 0.001 0.01 1 --n_epochs 80000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 100 --ad_max 0
+
+1111_2:loss_weight_dir
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1111_2//2_100_128_nd --loss_weight_dir loss_weight//nd.npy --batch_size 6 18 --repeat_size 1 1 --n_epochs 10000 --t_ron 3 --n_windows 4 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 100 --ad_max 0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1111_2//2_100_128_nd_slow --loss_weight_dir loss_weight//nd_slow.npy --batch_size 6 18 --repeat_size 1 1 --n_epochs 10000 --t_ron 3 --n_windows 2 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 100 --ad_max 0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1111_2//2_100_128_nd_1e-4_1e-2 --loss_weight_dir loss_weight//5000_1e-4_1e-2_1.npy --batch_size 6 18 --repeat_size 1 1 --n_epochs 5000 --t_ron 3 --n_windows 2 --learning_rate 0.005 --g 0.01 --t_rinterval 7 --N_Neuron 128 --w_reg 100 --ad_max 0 --device cuda:0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1111_2//2_100_128_nd_1e-4_1e-2 --loss_weight_dir loss_weight//10000_f_1e-4_1e-2_1.npy --batch_size 6 18 --repeat_size 1 1 --n_epochs 5000 --t_ron 5 --n_windows 3 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 100 --ad_max 0
+
+python RNNTest.py  --load_set SD2//1_0.6//Seq_set.npz --out_dir 1111_2//2_10_128_nd_1e-4_1e-2 --loss_weight_dir loss_weight//10000_f_1e-4_1e-2_1.npy --batch_size 6 18 --repeat_size 1 1 --n_epochs 5000 --t_ron 5 --n_windows 3 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 0
+
+python RNNTest.py  --load_set SD//1_0.6_0.6//Seq_set.npz --out_dir 1111_2//3_10_128_nd_1e-4_1e-2 --loss_weight_dir loss_weight//1000_f_1e-4_1e-2_1.npy --batch_size 6 18 72 --repeat_size 1 1 1 --n_epochs 1000 --t_ron 5 --n_windows 3 --learning_rate 0.005 --g 0.01 --t_rinterval 11 --N_Neuron 128 --w_reg 10 --ad_max 0 --device cuda:1

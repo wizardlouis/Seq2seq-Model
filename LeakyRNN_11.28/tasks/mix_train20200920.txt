@@ -1,0 +1,19 @@
+python RNNTest.py --out_dir mixed//len1 --n_epoch 200 --burn_in 0 --N_Neuron 128 --g_D 0.1 --learning_rate 0.01 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 130 --trainset_ratio 1 
+
+python RNNTest.py --out_dir mixed//len1_2 --n_epoch 500 --burn_in 200 --N_Neuron 128 --g_D 0.1 --learning_rate 0.01 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 130 --trainset_ratio 1 
+
+python RNNTest.py --out_dir mixed//len1_3 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.1 --learning_rate 0.01 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 3 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 130 --trainset_ratio 1 
+
+python RNNTest.py --out_dir mixed//len1_4 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.1 --learning_rate 0.01 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 5 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 130 --trainset_ratio 1 
+
+python RNNTest.py --out_dir mixed//len1_5 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.1 --learning_rate 0.01 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 50 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 130 --trainset_ratio 1 
+
+python RNNTest.py --out_dir mixed//len1_6 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.03 --learning_rate 0.01 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 100 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 80 --trainset_ratio 1
+
+python RNNTest.py --load_dir mixed//len1_6//model.pth --out_dir mixed//len1_7 --n_epoch 1500 --burn_in 0 --N_Neuron 128 --g_D 0.03 --learning_rate 0.003 --seq_length 1 --t_cue 15 --t_on 15 --t_off 5 --t_ron 100 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 80 --trainset_ratio 1 
+
+python mixed_2.py --load_dir mixed//len1_6//model.pth --out_dir mixed//len2_1 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.03 --learning_rate 0.01 --t_cue 15 --t_on 15 --t_off 5 --t_ron 5 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 80 --trainset_ratio 0.6
+
+python mixed_2.py --load_dir mixed//len2_1//model.pth --out_dir mixed//len2_2 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.03 --learning_rate 0.01 --t_cue 15 --t_on 15 --t_off 5 --t_ron 5 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 180 --trainset_ratio 0.6
+
+python mixed_2.py --load_dir mixed//len1_4//model.pth --out_dir mixed//len2_3 --n_epoch 1500 --burn_in 500 --N_Neuron 128 --g_D 0.1 --learning_rate 0.01 --t_cue 15 --t_on 15 --t_off 5 --t_ron 5 --t_roff 15 --batch_size 6 --t_delay 50 --t_ad_min 30 --t_ad_max 130 --trainset_ratio 0.6

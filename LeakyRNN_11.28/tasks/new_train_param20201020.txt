@@ -1,0 +1,12 @@
+N_Neuron 128
+t_cue 5(约束最开始的点处于0态是比较合理的假设，这个假设甚至可以拓展到所有输入的时间点，一直到delay阶段结束)
+t_rest 10
+t_on 5
+t_off 10
+t_vary 3(sensory input起始点在这个附近改变)
+t_ron 5(5*7个窗口，这样就是11个步长)
+t_roff 5-在新的代码中是 t_rinterval=t_ron+t_roff=10，是两个item retrieve的距离
+t_retrieve 50（在最后的10个步长要求处于0态，之前有5+10+10+11=36步） 
+t_delay 50(+10-50之间)
+
+一个步长模拟相当于实验中的0.04s，也就3步相当于实验中的一个frame的处理
